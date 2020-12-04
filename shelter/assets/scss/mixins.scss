@@ -1,0 +1,145 @@
+a {
+  cursor: url('../../assets/icons/icon-cursor-hover.svg'), pointer;
+}
+
+@mixin h2 {
+  font: {
+    family: Georgia;
+    weight: 400;
+    size: 4.4rem;
+  }
+  line-height: 130%;
+}
+
+@mixin h3 {
+  font: {
+    family: Georgia;
+    weight: 400;
+    size: 3.5rem;
+  }
+  letter-spacing: 0.21rem;
+  line-height: 130%;
+}
+
+@mixin h3-mobile {
+  font: {
+    family: Georgia;
+    weight: 400;
+    size: 2.5rem;
+  }
+  letter-spacing: 0.06rem;
+  line-height: 130%;
+}
+
+@mixin h4 {
+  font: {
+    family: Georgia;
+    weight: 400;
+    size: 2rem;
+  }
+  letter-spacing: 0.12rem;
+  line-height: 115%;
+}
+
+@mixin h5 {
+  font: {
+    family: Georgia;
+    weight: 400;
+    size: 1.5rem;
+  }
+  letter-spacing: 0.09rem;
+  line-height: 110%;
+}
+
+@mixin paragraph-l {
+  font: {
+    family: Arial;
+    weight: 400;
+    size: 1.5rem;
+  }
+  line-height: 160%;
+}
+
+@mixin paragraph-s {
+  font: {
+    family: Arial;
+    weight: 400;
+    size: 1.2rem;
+    style: italic;
+  }
+  line-height: 150%;
+}
+
+@mixin logo_title {
+  font: {
+    family: Georgia;
+    weight: 400;
+    size: 3.2rem;
+  }
+  letter-spacing: 0.192rem;
+  line-height: 160%;
+}
+
+@mixin logo_subtitle {
+  font: {
+    family: Arial;
+    weight: 400;
+    size: 1.3rem;
+  }
+  letter-spacing: 0.13rem;
+  line-height: 1.5rem;
+}
+
+@mixin slider_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.2rem;
+  height: 5.2rem;
+  box-shadow: inset 0 0 0 0.3rem $color-primary;
+  border: none;
+  border-radius: 100%;
+  padding: 1.9rem;
+  background: none;
+  cursor: url('../../assets/icons/icon-cursor-hover.svg'), pointer;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: none;
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin button {
+  padding: 1.5rem 4.5rem;
+  border-radius: 10rem;
+  letter-spacing: 0.102rem;
+  line-height: 130%;
+  font-size: 1.7rem;
+  cursor: url('../../assets/icons/icon-cursor-hover.svg'), pointer;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  color: $color-dark-3xl;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@mixin button_primary {
+  background-color: $color-primary;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+  @include button();
+  letter-spacing: 0.18rem;
+}
+
+@mixin button_secondary {
+  box-shadow: inset 0 0 0 0.2rem $color-primary;
+  &:hover {
+    box-shadow: none;
+    background-color: $color-primary-light;
+  }
+  background-color: transparent;
+  @include button()
+}
